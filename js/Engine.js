@@ -63,7 +63,8 @@ class Engine {
     // We check if the player is dead. If he is, we alert the user
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
-      document.getElementById('audio-here').play();
+      document.getElementById('audio-here').pause();
+      document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
       window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       return;
