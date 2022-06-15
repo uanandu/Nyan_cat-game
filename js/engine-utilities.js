@@ -48,9 +48,10 @@ const addBackground = (root) => {
   const bg = document.createElement('img');
 
   // We set its src attribute and the height and width CSS attributes
-  bg.src = 'images/stars.png';
+  bg.src = 'images/dancing-groove.gif';
   bg.style.height = `${GAME_HEIGHT}px`;
   bg.style.width = `${GAME_WIDTH}px`;
+  bg.style.backgroundPosition = 'cover';
 
   // We add it to the root DOM node
   root.append(bg);
@@ -68,4 +69,16 @@ const addBackground = (root) => {
   whiteBox.style.width = `${GAME_WIDTH}px`;
   whiteBox.style.background = '#fff';
   root.append(whiteBox);
+
+  //cover the right side of the gamebox
+  const sideBox = document.createElement('div');
+  sideBox.style.zIndex = 100;
+  sideBox.style.position = 'absolute';
+  sideBox.style.left = `${GAME_WIDTH}px`;
+  sideBox.style.top = 0;
+  sideBox.style.height = `${GAME_HEIGHT}px`;
+  whiteBox.style.background = '#fff';
+  root.append(sideBox);
+
+
 };
