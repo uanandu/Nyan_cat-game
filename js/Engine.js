@@ -7,6 +7,7 @@ class Engine {
   constructor(theRoot) {
     // We need the DOM element every time we create a new enemy so we
     // store a reference to it in a property of the instance.
+    
     this.root = theRoot;
     // We create our hamburger.
     // Please refer to Player.js for more information about what happens when you create a player
@@ -16,13 +17,15 @@ class Engine {
     this.enemies = [];
     // We add the background image to the game
     addBackground(this.root);
-  }
 
+  }
+  
   // The gameLoop will run every few milliseconds. It does several things
   //  - Updates the enemy positions
   //  - Detects a collision between the player and any enemy
   //  - Removes enemies that are too low from the enemies array
   gameLoop = () => {
+
     // This code is to see how much time, in milliseconds, has elapsed since the last
     // time this method was called.
     // (new Date).getTime() evaluates to the number of milliseconds since January 1st, 1970 at midnight.
@@ -39,6 +42,8 @@ class Engine {
       enemy.update(timeDiff);
     });
 
+    // console.log(timeDiff);
+
     // We remove all the destroyed enemies from the array referred to by \`this.enemies\`.
     // We use filter to accomplish this.
     // Remember: this.enemies only contains instances of the Enemy class.
@@ -52,22 +57,47 @@ class Engine {
       // We add this enemy to the enemies array
       const spot = nextEnemySpot(this.enemies);
       this.enemies.push(new Enemy(this.root, spot));
+      // console.log(spot);
     }
 
     // We check if the player is dead. If he is, we alert the user
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
-      window.alert('Game over');
+      document.getElementById('audio-here').play();
+      document.removeEventListener('keydown', keydownHandler);
+      window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       return;
     }
-
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
     setTimeout(this.gameLoop, 20);
   };
-
+  
   // This method is not implemented correctly, which is why
   // the burger never dies. In your exercises you will fix this method.
   isPlayerDead = () => {
-    return false;
+    // console.log(this.player);
+    // console.log(this.enemies)
+
+    // i took the values and put it in a variable for my convienience
+    let myEnemies = this.enemies;
+    let myPlayer = this.player;
+    
+    // use this to iterate through the array to get the x-coordinate
+    let winOrLose = myEnemies.find((item) => {
+      if (item.x === myPlayer.x && item.y + ENEMY_HEIGHT >= GAME_HEIGHT - PLAYER_HEIGHT) {
+        return true;
+      } else {
+        return false;
+      }
+      // console.log(item.x);
+    });
+
+    // console.log(winOrLose);
+    return winOrLose;
   };
+
+  if (){
+
+  }
+
 }
