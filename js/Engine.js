@@ -31,7 +31,7 @@ class Engine {
     
     window.onload = () => {
       let backSong =  document.getElementById('audio-here')
-      // backSong.volume = 1;
+      backSong.volume = 1;
       backSong.play();
     }
 
