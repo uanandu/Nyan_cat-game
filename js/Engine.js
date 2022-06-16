@@ -71,8 +71,9 @@ class Engine {
       document.getElementById('audio-here').pause();
       document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
-      this.player.domElement.style.width = '160px';
-      this.player.domElement.style.height = '150px';
+      this.player.domElement.src ='images/rick_roll.gif';
+      this.player.domElement.style.width = '100px';
+      this.player.domElement.style.height = '100px';
       
       // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       clearInterval(scoreHere);
