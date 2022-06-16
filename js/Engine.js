@@ -78,6 +78,8 @@ class Engine {
       
       // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       clearInterval(scoreHere);
+
+      this.text.update('Game over') ;
       // this.player.domElement.innerText = "I am Dead";
       // this.player.domElement.style.color = 'white';
       // this.player.domElement.style.textAlign = 'center';
