@@ -16,7 +16,6 @@ class Engine {
     //refers to the Text.js file
     this.text = new Text(this.root);
 
-
     // Initially, we have no enemies in the game. The enemies property refers to an array
     // that contains instances of the Enemy class
     this.enemies = [];
@@ -93,7 +92,7 @@ class Engine {
   isPlayerDead = () => {
     // console.log(this.player);
     // console.log(this.enemies)
-
+    
     // i took the values and put it in a variable for my convienience
     let myEnemies = this.enemies;
     let myPlayer = this.player;

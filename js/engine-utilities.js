@@ -70,25 +70,30 @@ const addBackground = (root) => {
   whiteBox.style.width = `${GAME_WIDTH}px`;
   root.append(whiteBox);
 
+  let score = 0;
+
+
   //cover the right side of the gamebox
   const sideBox = document.createElement('div');
   sideBox.classList.add('side-box');
   sideBox.style.zIndex = 200;
-  sideBox.innerHTML = '<span>Score Here</span>';  
+  sideBox.innerHTML = `Score: ${score}`;  
   sideBox.style.left = `${GAME_WIDTH}px`;
   sideBox.style.height = `${GAME_HEIGHT+ENEMY_HEIGHT}px`;
   root.append(sideBox);
 
+  setInterval(() => {
+      score++
+      sideBox.innerHTML = `Score: ${score}`;
+  }, 2000)
 };
+
+
 
 // const scoreSystem = (root) => {
 //   let score=0;
 
-//   setInterval(() => {
-
 //     const scoreBox = document.createElement('div');
-
-//     score++
 //     scoreBox.style.zIndex= 100;
 //     scoreBox.style.position = 'absolute';
 //     scoreBox.style.top = `${PLAYER_HEIGHT}px`;
@@ -97,9 +102,13 @@ const addBackground = (root) => {
 //     scoreBox.style.innerText = `${score}`;
 //     root.append(scoreBox);
 
+
+//   setInterval(() => {
+//       score++
+//       scoreBox.style.innerText = `${score}`;
+
 //   }, 2000)
 // }
-
 
 
 // const startButton = (root) => {
