@@ -39,6 +39,8 @@ const nextEnemySpot = (enemies) => {
   return candidate;
 };
 
+let scoreHere;
+
 // addBackground contains all the logic to display the starry background of the game.
 // It is a variable that refers to a function.
 // The function takes one parameter
@@ -90,13 +92,11 @@ const addBackground = (root) => {
 
   root.append(sideBox);
 
-
-
-
-  setInterval(() => {
+  scoreHere = setInterval(() => {
       score++
       scoreBoard.innerHTML = `Live 🕹 Score: ${score}`;
   }, 3000)
+
 };
 
 

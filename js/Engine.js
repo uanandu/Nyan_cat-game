@@ -77,10 +77,10 @@ class Engine {
       this.player.domElement.style.height = '150px';
       
       // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
-
-      this.player.domElement.innerText = "I am Dead";
-      this.player.domElement.style.color = 'white';
-      this.player.domElement.style.textAlign = 'center';
+      clearInterval(scoreHere);
+      // this.player.domElement.innerText = "I am Dead";
+      // this.player.domElement.style.color = 'white';
+      // this.player.domElement.style.textAlign = 'center';
       return;
     }
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
@@ -92,7 +92,7 @@ class Engine {
   isPlayerDead = () => {
     // console.log(this.player);
     // console.log(this.enemies)
-    
+
     // i took the values and put it in a variable for my convienience
     let myEnemies = this.enemies;
     let myPlayer = this.player;
