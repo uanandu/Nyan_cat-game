@@ -96,7 +96,7 @@ const addBackground = (root) => {
       score++
       scoreBoard.innerHTML = `Live 🕹 Score: ${score}`;
       let cheerHere = "Great run!!!🕹"
-      if (`${score}`>20){
+      if (`${score}`>10){
         scoreBoard.innerHTML = `Live 🕹 Score: ${score} `+ ' ' + cheerHere;
       }
   
