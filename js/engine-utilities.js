@@ -95,6 +95,11 @@ const addBackground = (root) => {
   scoreHere = setInterval(() => {
       score++
       scoreBoard.innerHTML = `Live 🕹 Score: ${score}`;
-  }, 2000)
+      let cheerHere = "Great run!!!🕹"
+      if (`${score}`>20){
+        scoreBoard.innerHTML = `Live 🕹 Score: ${score} `+ ' ' + cheerHere;
+      }
+  
+    }, 2000)
 
 };
