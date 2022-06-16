@@ -16,7 +16,6 @@
 }
 
 .side-box {
-    text-align: center;
     background-color: white;
     width: 200px;
     position: absolute;
@@ -27,3 +26,14 @@
     font-size: 2rem;
 }
 
+.score-board {
+    text-align: center;
+    background-color: white;
+    width: 200px;
+    position: absolute;
+    top: 400px;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+}

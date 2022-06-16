@@ -77,14 +77,25 @@ const addBackground = (root) => {
   const sideBox = document.createElement('div');
   sideBox.classList.add('side-box');
   sideBox.style.zIndex = 200;
-  sideBox.innerHTML = `Score: ${score}`;  
   sideBox.style.left = `${GAME_WIDTH}px`;
   sideBox.style.height = `${GAME_HEIGHT+ENEMY_HEIGHT}px`;
   root.append(sideBox);
 
+  //child of sideBox
+  const scoreBoard = document.createElement('div');
+  scoreBoard.className = 'score-board';
+  scoreBoard.style.zIndex = 200;
+  scoreBoard.innerHTML = `Live 🕹 Score: ${score}`;  
+  sideBox.appendChild(scoreBoard);
+
+  root.append(sideBox);
+
+
+
+
   setInterval(() => {
       score++
-      sideBox.innerHTML = `Score: ${score}`;
+      scoreBoard.innerHTML = `Live Score: ${score}`;
   }, 3000)
 };
 
