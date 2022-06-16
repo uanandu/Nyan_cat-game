@@ -83,6 +83,27 @@ const addBackground = (root) => {
 
 };
 
+// const scoreSystem = (root) => {
+//   let score=0;
+
+//   setInterval(() => {
+
+//     const scoreBox = document.createElement('div');
+
+//     score++
+//     scoreBox.style.zIndex= 100;
+//     scoreBox.style.position = 'absolute';
+//     scoreBox.style.top = `${PLAYER_HEIGHT}px`;
+//     scoreBox.style.width = `${PLAYER_WIDTH}px`;
+//     scoreBox.style.color = 'white';
+//     scoreBox.style.innerText = `${score}`;
+//     root.append(scoreBox);
+
+//   }, 2000)
+// }
+
+
+
 // const startButton = (root) => {
   
 //   // create a button for starting the game

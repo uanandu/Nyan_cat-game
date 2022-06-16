@@ -22,9 +22,6 @@ class Engine {
     this.enemies = [];
     // We add the background image to the game
     addBackground(this.root);
-
-    // startButton(this.root);
-
   }
   
   // The gameLoop will run every few milliseconds. It does several things
@@ -77,7 +74,7 @@ class Engine {
       document.getElementById('audio-here').pause();
       document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
-      this.player.domElement.style.width = '100px';
+      this.player.domElement.style.width = '160px';
       this.player.domElement.style.height = '150px';
       
       // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
