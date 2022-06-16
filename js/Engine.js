@@ -69,7 +69,8 @@ class Engine {
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
       document.getElementById('audio-here').pause();
-      // document.getElementById('game-over').play();
+      
+      document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
       window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       return;
@@ -101,9 +102,5 @@ class Engine {
     // console.log(winOrLose);
     return winOrLose;
   };
-
-  if (){
-
-  }
 
 }
