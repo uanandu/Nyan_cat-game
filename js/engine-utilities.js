@@ -95,7 +95,7 @@ const addBackground = (root) => {
 
   setInterval(() => {
       score++
-      scoreBoard.innerHTML = `Live Score: ${score}`;
+      scoreBoard.innerHTML = `Live 🕹 Score: ${score}`;
   }, 3000)
 };
 
