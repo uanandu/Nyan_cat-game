@@ -30,7 +30,9 @@ class Engine {
   gameLoop = () => {
     
     window.onload = () => {
-      document.getElementById('audio-here').play();
+      let songHere = document.getElementById('audio-here')
+      songHere.volume = '1';
+      songHere.play();
     }
 
     // This code is to see how much time, in milliseconds, has elapsed since the last
