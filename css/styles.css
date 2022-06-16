@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Classes here */
+
+.whiteBox {
+    background-color: #fff;
+    width: 1000px;
+    z-index: 100;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.side-box {
+    text-align: center;
+    background-color: white;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+}
+

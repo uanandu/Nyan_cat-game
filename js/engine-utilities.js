@@ -62,24 +62,22 @@ const addBackground = (root) => {
   const whiteBox = document.createElement('div');
 
   // We put a high z-index so that the div is placed over all other DOM nodes
-  whiteBox.style.zIndex = 100;
+  whiteBox.classList.add('whitebox');
+  whiteBox.innerHTML = '⬅️ --- ➡️'
   whiteBox.style.position = 'absolute';
   whiteBox.style.top = `${GAME_HEIGHT}px`;
   whiteBox.style.height = `${ENEMY_HEIGHT}px`;
   whiteBox.style.width = `${GAME_WIDTH}px`;
-  whiteBox.style.background = '#fff';
   root.append(whiteBox);
 
   //cover the right side of the gamebox
   const sideBox = document.createElement('div');
-  sideBox.style.zIndex = 100;
-  sideBox.style.position = 'absolute';
+  sideBox.classList.add('side-box');
+  sideBox.style.zIndex = 200;
+  sideBox.innerHTML = '<span>Score Here</span>';  
   sideBox.style.left = `${GAME_WIDTH}px`;
-  sideBox.style.top = 0;
-  sideBox.style.height = `${GAME_HEIGHT}px`;
-  whiteBox.style.background = '#fff';
+  sideBox.style.height = `${GAME_HEIGHT+ENEMY_HEIGHT}px`;
   root.append(sideBox);
-
 
 };
 
