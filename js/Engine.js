@@ -13,6 +13,10 @@ class Engine {
     // Please refer to Player.js for more information about what happens when you create a player
     this.player = new Player(this.root);
     
+    //refers to the Text.js file
+    this.text = new Text(this.root);
+
+
     // Initially, we have no enemies in the game. The enemies property refers to an array
     // that contains instances of the Enemy class
     this.enemies = [];
@@ -68,6 +72,11 @@ class Engine {
       document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
       window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
+
+      // We call the text function here to display the message game over:
+      let textHere = this.text;
+      console.log(textHere);
+
       return;
     }
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds
