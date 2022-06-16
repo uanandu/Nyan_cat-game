@@ -14,7 +14,7 @@ class Engine {
     this.player = new Player(this.root);
     
     //refers to the Text.js file
-    this.text = new Text(this.root, '400px', '500px');
+    this.text = new Text(this.root, `${GAME_WIDTH/2.5}`, `${GAME_HEIGHT/2}`);
 
     // Initially, we have no enemies in the game. The enemies property refers to an array
     // that contains instances of the Enemy class
@@ -81,7 +81,8 @@ class Engine {
       // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
       clearInterval(scoreHere);
 
-      this.text.innerText = 'Game over';
+      this.text.domElement.fontSize = '100px'
+      this.text.update('☠️Game over☠️');
       // console.log(this.text.domElement);
 
       // this.player.domElement.innerText = "I am Dead";

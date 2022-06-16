@@ -7,6 +7,8 @@ class Text {
     // set the \`domElement\` property of the instance to the newly created DOM element so we can update it later
     const div = document.createElement('div');
 
+    div.style.fontFamily = 'monospace';
+    div.style.fontSize = '100px';
     div.style.position = 'absolute';
     div.style.left = xPos;
     div.style.top = yPos;
