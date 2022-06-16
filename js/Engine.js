@@ -29,11 +29,12 @@ class Engine {
   //  - Removes enemies that are too low from the enemies array
   gameLoop = () => {
     
-    window.onload = () => {
-      let songHere = document.getElementById('audio-here')
+    let playHere = () => {
+      let songHere = new Audio('../rickroll.mp3');
       songHere.volume = '1';
       songHere.play();
     }
+    playHere();
 
     // This code is to see how much time, in milliseconds, has elapsed since the last
     // time this method was called.
