@@ -14,7 +14,7 @@ class Engine {
     this.player = new Player(this.root);
     
     //refers to the Text.js file
-    this.text = new Text(this.root);
+    this.text = new Text(this.root, '400px', '500px');
 
     // Initially, we have no enemies in the game. The enemies property refers to an array
     // that contains instances of the Enemy class
