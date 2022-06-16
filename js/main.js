@@ -10,6 +10,13 @@ const keydownHandler = (event) => {
   // event.code contains a string. The string represents which key was press. If the
   // key is left, then we call the moveLeft method of gameEngine.player (where is this method defined?)
   
+    window.onload = () => {
+      let songHere = document.getElementById('audio-here')
+      songHere.volume = 1;
+      songHere.play();
+    }
+
+
   // console.log(event);
   
   if (event.code === 'ArrowLeft') {
