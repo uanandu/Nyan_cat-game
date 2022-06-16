@@ -9,7 +9,7 @@ const gameEngine = new Engine(document.getElementById('app'));
 const keydownHandler = (event) => {
   // event.code contains a string. The string represents which key was press. If the
   // key is left, then we call the moveLeft method of gameEngine.player (where is this method defined?)
-  
+
   // console.log(event);
   
   if (event.code === 'ArrowLeft') {
@@ -25,6 +25,13 @@ const keydownHandler = (event) => {
 
 // We add an event listener to document. document the ancestor of all DOM nodes in the DOM.
 document.addEventListener('keydown', keydownHandler);
+
+let grooveHere = () => {
+  let musicHere = new Audio('../rickroll.mp3');
+  musicHere.volume = 1;
+  musicHere.play();
+}
+grooveHere();
 
 // We call the gameLoop method to start the game
 gameEngine.gameLoop();
