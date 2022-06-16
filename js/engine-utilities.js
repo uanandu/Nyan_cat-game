@@ -85,7 +85,7 @@ const addBackground = (root) => {
   setInterval(() => {
       score++
       sideBox.innerHTML = `Score: ${score}`;
-  }, 2000)
+  }, 3000)
 };
 
 
