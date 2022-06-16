@@ -23,6 +23,8 @@ class Engine {
     // We add the background image to the game
     addBackground(this.root);
 
+    // startButton(this.root);
+
   }
   
   // The gameLoop will run every few milliseconds. It does several things
@@ -69,10 +71,16 @@ class Engine {
     // and return from the method (Why is the return statement important?)
     if (this.isPlayerDead()) {
       document.getElementById('audio-here').pause();
-      
       document.getElementById('game-over').play();
       document.removeEventListener('keydown', keydownHandler);
-      window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
+      this.player.domElement.style.width = '100px';
+      this.player.domElement.style.height = '150px';
+      
+      // window.alert('Game over boy!! Get yo ass out of the chair!!!! 🤌🏻');
+
+      this.player.domElement.innerText = "I am Dead";
+      this.player.domElement.style.color = 'white';
+      this.player.domElement.style.textAlign = 'center';
       return;
     }
     // If the player is not dead, then we put a setTimeout to run the gameLoop in 20 milliseconds

@@ -83,3 +83,35 @@ const addBackground = (root) => {
 
 };
 
+// const startButton = (root) => {
+  
+//   // create a button for starting the game
+//   const buttonHere = document.createElement('button');
+
+//   buttonHere.style.width = '200px';
+//   buttonHere.style.height = '100px';
+//   buttonHere.style.zIndex = 5;
+//   buttonHere.style.innerText = 'Start';
+//   buttonHere.style.top = `${GAME_HEIGHT/3}`;
+//   buttonHere.style.left = `${GAME_HEIGHT/3}`;
+//   root.appendChild(buttonHere);
+
+// }
+
+// const restartButton = (root) => {
+
+//   //create button to restart game
+
+//   const restartHere = document.createElement('button');
+
+//   buttonHere.style.width = '200px';
+//   buttonHere.style.height = '100px';
+//   buttonHere.style.zIndex = 5;
+//   buttonHere.style.innerText = 'Start';
+//   buttonHere.style.top = `${GAME_HEIGHT/3}`;
+//   buttonHere.style.left = `${GAME_HEIGHT/3}`;
+//   root.appendChild(buttonHere);
+
+
+// }
+
